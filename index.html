@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Template-2</title>
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    
+<body class="font-font-roboto">
+    <!-- Heading -->
+    <header class="sticky top-0 z-50">
+        <nav class="container flex justify-between items-center">
+            <div class="text-black font-font-roboto font-light text-3xl py-7">
+                <a href="#home">
+                    Active.
+                </a>
+            </div>
+            <div class="">
+                <ul class="hidden font-font-lato font-normal text-base lg:flex items-center space-x-6">
+                    <li><a class="hover:text-color-primary ease-in duration-200" href="#home">Home</a></li>
+                    <li><a class="hover:text-color-primary ease-in duration-200" href="#home">About</a></li>
+                    <li><a class="hover:text-color-primary ease-in duration-200" href="#home">Servies</a></li>
+                    <li><a class="hover:text-color-primary ease-in duration-200" href="#home">Portfolio</a></li>
+                    <li><a class="hover:text-color-primary ease-in duration-200" href="#home">Team</a></li>
+                    <li><a class="hover:text-color-primary ease-in duration-200" href="#home">Blog</a></li>
+                    <li><a class="hover:text-color-primary ease-in duration-200" href="#home">   
+                           Dropdown
+                           <sub style="vertical-align: super;font-size: smaller;"
+                                class=""><i class="fa-solid fa-chevron-down font-light font-font-lato ml-1"></i>
+                           </sub>
+                        </a>
+                    </li>
+                    <li><a class="hover:text-color-primary ease-in duration-200" href="#home">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="menuber" class="lg:hidden cursor-pointer z-50">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </div>
+
+            <div id="menu" class="hidden bg-white rounded-xl shadow-lg h-[600px] absolute top-20 inset-0">
+                <ul class="container font-font-lato h-full flex flex-col gap-4 py-5 ">
+                    <li><a id="hlink" class="hover:text-color-primary ease-in duration-200" href="#home">Home</a></li>
+                    <li><a id="hlink" class="hover:text-color-primary ease-in duration-200" href="#home">About</a></li>
+                    <li><a id="hlink" class="hover:text-color-primary ease-in duration-200" href="#home">Servies</a></li>
+                    <li><a id="hlink" class="hover:text-color-primary ease-in duration-200" href="#home">Portfolio</a></li>
+                    <li><a id="hlink" class="hover:text-color-primary ease-in duration-200" href="#home">Team</a></li>
+                    <li><a id="hlink" class="hover:text-color-primary ease-in duration-200" href="#home">Blog</a></li>
+                    <li><a id="hlink" class="hover:text-color-primary ease-in duration-200 flex items-center justify-between" href="#home">   
+                           Dropdown
+                           <sub style="vertical-align: super;font-size: smaller;"
+                                class="size-10 rounded-full bg-[#e6f3e8] flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-down font-light font-font-lato"></i>
+                           </sub>
+                        </a>
+                    </li>
+                    <li><a id="hlink" class="hover:text-color-primary ease-in duration-200" href="#home">Contact</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- JS -->
+
+    <script>
+        // Header
+
+        const navbar = document.querySelector('header');
+
+        window.onscroll = () => {
+            if(window.scrollY > 100) {
+                navbar.classList.add('bg-color-primary-dark');
+                navbar.classList.add('border-b');
+                navbar.classList.add('border-color-gray');
+            } else {
+                navbar.classList.remove('bg-color-primary-dark');
+                navbar.classList.remove('border-b');
+                navbar.classList.remove('border-color-gray');
+            }
+        }
+       
+
+        // Mobile User
+        const menuber = document.querySelector('#menuber');
+        const menu = document.querySelector('#menu');
+        const hlink = document.querySelectorAll('#hlink');
+        const fasolid = document.querySelector('.fa-solid');
+
+        menuber.addEventListener("click", () =>{
+            menu.classList.toggle('hidden');
+            fasolid.classList.toggle('fa-xmark')
+        })
+    </script>
 </body>
 </html>
