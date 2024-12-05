@@ -9,6 +9,7 @@ module.exports = {
         'text-color': '#e1e1e2',
         'color-white-bold': '#f3f4f4',
         'color-border': '#f2f2f2',
+        'color-white-ass': '#cdcfcf',
       },
       fontFamily : {
         'font-roboto': 'Roboto',
