@@ -8,10 +8,7 @@ module.exports = {
         'color-secndary': '#2d465e',
         'text-color': '#e1e1e2',
         'color-white-bold': '#f3f4f4',
-        'color-border': '#F0F0F0',
-        'color-white-dark': '#FDF7FB',
-        'gradient-start': '#FFFFFF',
-        'gradient-end': '#D8A7BE',
+        'color-border': '#f2f2f2',
       },
       fontFamily : {
         'font-roboto': 'Roboto',
